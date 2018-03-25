@@ -1,0 +1,10 @@
+gpflow                    1.1.0                     <pip>
+ipykernel                 4.8.2                    py35_0  
+jupyter                   1.0.0                    py35_4  
+python                    3.5.4               hc3d631a_27  
+scipy                     1.0.0                     <pip>
+spyder                    3.2.8                    py35_0    anaconda
+spyder-notebook           0.1.2                    py35_0    spyder-ide
+spyder-terminal           0.2.3                    py35_0    spyder-ide
+tensorflow                1.6.0                     <pip>
+

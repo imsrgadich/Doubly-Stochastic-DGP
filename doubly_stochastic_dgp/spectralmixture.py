@@ -20,8 +20,6 @@ from gpflow.params import Parameter
 from gpflow.kernels import Kernel
 from gpflow import transforms,settings
 
-import pdb
-
 class SpectralMixture(Kernel):
     def __init__(self, num_mixtures=1, mixture_weights=[],\
                  mixture_scales=[],mixture_means=[],\
@@ -113,7 +111,6 @@ class SpectralMixture(Kernel):
         self.mixture_weights= np.divide(np.std(train_y,axis=0),\
                             self.num_mixtures)*np.ones(self.num_mixtures)
         self.mixture_weights= Parameter(self.mixture_weights)
-        pdb.set_trace()
         return None
    
     @params_as_tensors
@@ -135,7 +132,7 @@ class SpectralMixture(Kernel):
         
         # we will optimize the standard deviations.
         
-        for ind in tf.range(self.input_dim):
+        #for ind in tf.range(self.input_dim):
             # write the exp term with looping over dimesion and
             # tf.reduce_prod(tf.multiply(t,tf.transpose(self.dim[ind,:],perm=[1 0])),axis=0) #take product over dimension
             # should give N x N matrix
